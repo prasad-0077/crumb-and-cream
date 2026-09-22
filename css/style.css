@@ -433,3 +433,96 @@ footer p {
 
     font-size: 14px;
 }
+
+/* ---------- CONTACT BUTTONS ---------- */
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.map-button {
+    background: #6b3f2a;
+}
+
+.map-button:hover {
+    background: #4d2b20;
+}
+
+ /* ---------- WHY CHOOSE US ---------- */
+
+.why-choose {
+    background: #fffaf5;
+}
+
+.why-container {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.why-card {
+    background: #ffffff;
+
+    padding: 30px 22px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eaded4;
+
+    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(80, 50, 30, 0.15);
+}
+
+.why-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    font-size: 20px;
+
+    color: #6b3f2a;
+
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #76645b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* ---------- WHY CHOOSE US RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+
+    .why-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+}
