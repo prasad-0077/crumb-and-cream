@@ -526,3 +526,95 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* ---------- HOW TO ORDER ---------- */
+
+.how-to-order {
+    background: #fffaf5;
+}
+
+.order-steps {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    position: relative;
+}
+
+.order-step {
+    background: #ffffff;
+
+    padding: 30px 22px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eaded4;
+
+    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.order-step:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(80, 50, 30, 0.15);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #a85f3f;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.order-step h3 {
+    font-size: 20px;
+
+    color: #6b3f2a;
+
+    margin-bottom: 12px;
+}
+
+.order-step p {
+    color: #76645b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* ---------- HOW TO ORDER RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+
+    .order-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .order-steps {
+        grid-template-columns: 1fr;
+    }
+}
