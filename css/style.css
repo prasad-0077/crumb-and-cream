@@ -199,18 +199,12 @@ header {
     gap: 25px;
 }
 
-.product-card {
-    background: #ffffff;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    border: 1px solid #eaded4;
-
-    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.08);
-
-    transition: all 0.3s ease;
+.product-card > img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .product-card:hover {
@@ -221,16 +215,6 @@ header {
 
 
 /* Product Image */
-
-.product-card > img {
-    width: 100%;
-
-    height: 230px;
-
-    object-fit: cover;
-
-    display: block;
-}
 
 
 /* Product Information */
@@ -325,6 +309,127 @@ header {
     }
 
     .product-card > img {
-        height: 250px;
+        height: 190px;
     }
+}
+
+/* ---------- GALLERY ---------- */
+
+.gallery {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.gallery-item {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #eaded4;
+
+    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(80, 50, 30, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.gallery-item h3 {
+    padding: 15px;
+
+    color: #6b3f2a;
+
+    font-size: 18px;
+}
+
+
+/* ---------- GALLERY MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 210px;
+    }
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    text-align: center;
+
+    padding: 90px 20px;
+
+    background: #ead5c5;
+}
+
+.contact h2 {
+    font-size: 40px;
+
+    color: #5b3425;
+
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 18px;
+
+    color: #65483b;
+
+    margin-bottom: 15px;
+}
+
+.contact .button {
+    margin-top: 15px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: #3b2922;
+
+    color: #f8eee7;
+}
+
+footer p {
+    margin: 5px 0;
+
+    font-size: 14px;
 }
