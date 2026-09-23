@@ -618,3 +618,29 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* ---------- PRODUCT DETAILS ---------- */
+
+.product-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.product-details span {
+    padding: 5px 10px;
+
+    background: #f8eee7;
+
+    color: #6b3f2a;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
