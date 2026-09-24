@@ -603,54 +603,48 @@ footer p {
 
 .contact-buttons {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
-.map-button {
-    background: #6b3f2a;
-}
+.contact-buttons .button {
+    display: inline-block;
 
-.map-button:hover {
-    background: #4d2b20;
-}
+    padding: 13px 25px;
 
- /* ---------- WHY CHOOSE US ---------- */
+    background: #5b3425;
 
-.why-choose {
-    background: #fffaf5;
-}
+    color: #ffffff;
 
-.why-container {
-    margin-top: 45px;
+    text-decoration: none;
 
-    display: grid;
+    border-radius: 28px;
 
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 25px;
-}
-
-.why-card {
-    background: #ffffff;
-
-    padding: 30px 22px;
-
-    border-radius: 18px;
-
-    border: 1px solid #eaded4;
-
-    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.08);
+    font-weight: bold;
 
     transition: all 0.3s ease;
 }
 
-.why-card:hover {
-    transform: translateY(-6px);
+.contact-buttons .button:visited {
+    background: #5b3425;
 
-    box-shadow: 0 15px 35px rgba(80, 50, 30, 0.15);
+    color: #ffffff;
+}
+
+.contact-buttons .button:hover {
+    background: #3f241a;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(80, 50, 30, 0.18);
 }
 
 .why-icon {
