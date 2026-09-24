@@ -644,3 +644,29 @@ footer p {
 
     font-weight: 600;
 }
+
+/* ---------- EQUAL PRODUCT CARD HEIGHT ---------- */
+
+.product-container {
+    align-items: stretch;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product-info .price {
+    margin-top: auto;
+}
+
+.product-info .order-button {
+    margin-top: 5px;
+}
