@@ -56,17 +56,6 @@ body {
     font-size: 16px;
 }
 
-
-/* ---------- NAVIGATION ---------- */
-
-header {
-    background: #fffaf5;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #eaded4;
-}
-
 /* ---------- NAVIGATION ---------- */
 
 header {
@@ -550,6 +539,12 @@ header {
 
 /* ---------- PRICE ---------- */
 
+.product-quantity {
+    margin: 0 0 6px;
+    font-size: 12px;
+    color: #8a7569;
+}
+
 .product-info .price {
     display: block;
 
@@ -631,85 +626,6 @@ header {
     }
 
 }
-
-/* ---------- GALLERY ---------- */
-
-.gallery {
-    margin-top: 50px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-
-/* ---------- GALLERY ITEM ---------- */
-
-.gallery-item {
-    background: #ffffff;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    border: 1px solid #eaded4;
-
-    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.08);
-
-    transition: all 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-6px);
-
-    box-shadow: 0 18px 35px rgba(80, 50, 30, 0.14);
-}
-
-
-/* ---------- GALLERY IMAGE ---------- */
-
-.gallery-item img {
-    width: 100%;
-
-    height: 260px;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-
-/* ---------- GALLERY RESPONSIVE ---------- */
-
-@media (max-width: 900px) {
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-@media (max-width: 650px) {
-
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-item img {
-        height: 230px;
-    }
-
-}
-
 
 /* ---------- CONTACT ---------- */
 
