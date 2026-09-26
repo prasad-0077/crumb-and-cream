@@ -1115,33 +1115,3 @@ footer p {
     }
 
 }
-
-/* ---------- FORCE HERO CENTER ---------- */
-
-.hero {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.hero-content h1,
-.hero-content h2,
-.hero-content p {
-    text-align: center;
-}
-
-.hero-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
