@@ -23,95 +23,172 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==============================
-       SEARCH
-       ============================== */
+   SEARCH
+   ============================== */
 
-    const searchButton =
-        document.getElementById("search-button");
+const searchButton =
+    document.getElementById("search-button");
 
-    const searchBox =
-        document.getElementById("search-box");
+const searchBox =
+    document.getElementById("search-box");
 
-    const searchInput =
-        document.getElementById("search-input");
+const searchInput =
+    document.getElementById("search-input");
 
-    const searchClose =
-        document.getElementById("search-close");
+const searchClose =
+    document.getElementById("search-close");
 
-    const products =
-        document.querySelectorAll(".product-card");
+const searchResults =
+    document.getElementById("search-results");
 
-
-    /* Open Search */
-
-    if (searchButton) {
-
-        searchButton.addEventListener("click", function () {
-
-            searchBox.classList.toggle("active");
-
-            if (searchBox.classList.contains("active")) {
-                searchInput.focus();
-            }
-
-        });
-
-    }
+const products =
+    document.querySelectorAll(".product-card");
 
 
-    /* Search Products */
+/* Open Search */
 
-    if (searchInput) {
+if (searchButton) {
 
-        searchInput.addEventListener("input", function () {
+    searchButton.addEventListener("click", function () {
 
-            const searchValue =
-                searchInput.value.trim().toLowerCase();
+        searchBox.classList.toggle("active");
 
-            products.forEach(function (product) {
+        if (searchBox.classList.contains("active")) {
+            searchInput.focus();
+        }
 
-                const productName =
-                    product
-                        .querySelector("h3")
-                        .textContent
-                        .toLowerCase();
+    });
 
-                if (
-                    searchValue === "" ||
-                    productName.includes(searchValue)
-                ) {
-
-                    product.style.display = "";
-
-                } else {
-
-                    product.style.display = "none";
-
-                }
-
-            });
-
-        });
-
-    }
+}
 
 
-    /* Close Search */
+/* Search Products */
 
-    if (searchClose) {
+if (searchInput) {
 
-        searchClose.addEventListener("click", function () {
+    searchInput.addEventListener("input", function () {
 
-            searchInput.value = "";
+        const searchValue =
+            searchInput.value.trim().toLowerCase();
+
+        searchResults.innerHTML = "";
+
+        /* Empty search */
+
+        if (searchValue === "") {
 
             products.forEach(function (product) {
                 product.style.display = "";
             });
 
-            searchBox.classList.remove("active");
+            return;
+        }
+
+
+        let found = false;
+
+
+        products.forEach(function (product) {
+
+            const productName =
+                product
+                    .querySelector("h3")
+                    .textContent
+                    .toLowerCase();
+
+
+            if (productName.includes(searchValue)) {
+
+                product.style.display = "";
+
+                found = true;
+
+                const result =
+                    document.createElement("button");
+
+                result.type = "button";
+
+                result.className =
+                    "search-result-item";
+
+                result.textContent =
+                    product.querySelector("h3").textContent;
+
+
+                result.addEventListener(
+                    "click",
+                    function () {
+
+                        searchBox.classList.remove("active");
+
+                        searchInput.value = "";
+
+                        searchResults.innerHTML = "";
+
+                        products.forEach(function (item) {
+                            item.style.display = "";
+                        });
+
+                        product.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    }
+                );
+
+
+                searchResults.appendChild(result);
+
+            } else {
+
+                product.style.display = "none";
+
+            }
 
         });
 
-    }
+
+        /* Item Not Found */
+
+        if (!found) {
+
+            const noResult =
+                document.createElement("div");
+
+            noResult.className =
+                "search-no-result";
+
+            noResult.innerHTML =
+                "<strong>Sorry, we couldn't find that item.</strong>" +
+                "<span>Please try another product.</span>";
+
+            searchResults.appendChild(noResult);
+
+        }
+
+    });
+
+}
+
+    /* Close Search */
+
+if (searchClose) {
+
+    searchClose.addEventListener("click", function () {
+
+        searchInput.value = "";
+
+        searchResults.innerHTML = "";
+
+        products.forEach(function (product) {
+            product.style.display = "";
+        });
+
+        searchBox.classList.remove("active");
+
+    });
+
+}
 
 });
