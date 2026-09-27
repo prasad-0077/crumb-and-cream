@@ -1106,3 +1106,71 @@ footer p {
 #search-close:hover {
     color: #a85f3f;
 }
+/* ---------- SEARCH RESULTS ---------- */
+
+.search-box {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.search-input-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-results {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.search-result-item {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #f0e5dc;
+    background: #ffffff;
+
+    padding: 10px;
+
+    text-align: left;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+
+    color: #6b3f2a;
+
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: #f8eee7;
+}
+
+
+/* ---------- NO SEARCH RESULT ---------- */
+
+.search-no-result {
+    border-top: 1px solid #f0e5dc;
+
+    padding: 12px 10px;
+
+    text-align: center;
+}
+
+.search-no-result strong {
+    display: block;
+
+    font-size: 12px;
+
+    color: #6b3f2a;
+
+    margin-bottom: 3px;
+}
+
+.search-no-result span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #8a7569;
+}
