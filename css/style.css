@@ -1031,3 +1031,78 @@ footer p {
     }
 
 }
+
+/* ---------- SEARCH BOX ---------- */
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-box {
+    position: absolute;
+    top: 48px;
+    right: 0;
+
+    width: 280px;
+
+    display: none;
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #eaded4;
+
+    border-radius: 12px;
+
+    padding: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(80, 50, 30, 0.15);
+
+    z-index: 1100;
+}
+
+.search-box.active {
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    padding: 9px 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #4a3329;
+
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #9a877b;
+}
+
+#search-close {
+    border: none;
+
+    background: transparent;
+
+    color: #6b3f2a;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    padding: 4px 7px;
+}
+
+#search-close:hover {
+    color: #a85f3f;
+}
