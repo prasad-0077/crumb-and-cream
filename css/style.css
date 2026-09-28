@@ -1089,17 +1089,11 @@ footer p {
 
 #search-close {
     border: none;
-
     background: transparent;
-
     color: #6b3f2a;
-
     font-size: 22px;
-
     line-height: 1;
-
     cursor: pointer;
-
     padding: 4px 7px;
 }
 

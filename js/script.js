@@ -64,7 +64,7 @@ if (searchButton) {
 
 /* Search Products */
 
-if (searchInput) {
+if (searchInput && searchResults) {
 
     searchInput.addEventListener("input", function () {
 
@@ -98,6 +98,8 @@ if (searchInput) {
 
 
             if (productName.includes(searchValue)) {
+
+                /* Show matching product */
 
                 product.style.display = "";
 
@@ -141,6 +143,8 @@ if (searchInput) {
                 searchResults.appendChild(result);
 
             } else {
+
+                /* Hide non-matching products */
 
                 product.style.display = "none";
 
