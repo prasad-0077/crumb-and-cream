@@ -1168,3 +1168,7 @@ footer p {
 
     color: #8a7569;
 }
+
+.product-card.search-hidden {
+    display: none;
+}

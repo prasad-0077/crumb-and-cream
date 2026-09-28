@@ -78,7 +78,7 @@ if (searchInput && searchResults) {
         if (searchValue === "") {
 
             products.forEach(function (product) {
-                product.style.display = "";
+                product.classList.remove("search-hidden");
             });
 
             return;
@@ -146,7 +146,7 @@ if (searchInput && searchResults) {
 
                 /* Hide non-matching products */
 
-                product.style.display = "none";
+                product.classList.add("search-hidden");
 
             }
 
@@ -185,9 +185,9 @@ if (searchClose) {
 
         searchResults.innerHTML = "";
 
-        products.forEach(function (product) {
-            product.style.display = "";
-        });
+    products.forEach(function (product) {
+       product.classList.remove("search-hidden");
+    });
 
         searchBox.classList.remove("active");
 
